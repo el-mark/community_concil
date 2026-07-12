@@ -1,0 +1,23 @@
+<h1>Reported issues</h1>
+
+<% if @issues.empty? %>
+  <div class="card">
+    <p>No issues have been reported yet.</p>
+    <p><%= link_to "Report the first one", new_issue_path %>.</p>
+  </div>
+<% else %>
+  <% @issues.each do |issue| %>
+    <div class="card issue">
+      <div class="issue-header">
+        <h2><%= issue.title %></h2>
+        <span class="badge badge-<%= issue.frequency %>"><%= issue.frequency.capitalize %></span>
+      </div>
+      <p class="muted">
+        <%= issue.address %> ·
+        reported by <%= issue.user.email %> ·
+        <%= time_ago_in_words(issue.created_at) %> ago
+      </p>
+      <p><%= simple_format(issue.description) %></p>
+    </div>
+  <% end %>
+<% end %>

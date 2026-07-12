@@ -1,0 +1,21 @@
+<h1>Register</h1>
+<p>Enter your email address and we'll send you a verification link. Once verified, you can report issues.</p>
+
+<%= form_with model: @user, url: signup_path, class: "card form" do |f| %>
+  <% if @user.errors.any? %>
+    <div class="errors">
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true, autofocus: true, placeholder: "you@example.com" %>
+  </div>
+
+  <%= f.submit "Send verification email" %>
+<% end %>

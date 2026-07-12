@@ -1,0 +1,6 @@
+<h1>Check your email</h1>
+<div class="card">
+  <p>We sent a verification link to <strong><%= @user.email %></strong>.</p>
+  <p>Click the link in that email to verify your account and start reporting issues.</p>
+  <p class="muted">Didn't get it? <%= link_to "Send it again", signup_path %>.</p>
+</div>
