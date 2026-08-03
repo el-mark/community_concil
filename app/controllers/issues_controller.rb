@@ -13,7 +13,7 @@ class IssuesController < ApplicationController
     @issue = current_user.issues.build(issue_params)
 
     if @issue.save
-      redirect_to issues_path, notice: "Your issue has been reported."
+      redirect_to issues_path, notice: "Tu problema ha sido reportado."
     else
       render :new, status: :unprocessable_entity
     end

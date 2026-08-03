@@ -3,6 +3,6 @@ class UserMailer < ApplicationMailer
     @user = user
     @verify_url = verify_url(token: user.verification_token)
 
-    mail to: user.email, subject: "Verify your email — Community Council"
+    mail to: user.email, subject: "Verifica tu correo electrónico — Junta Vecinal"
   end
 end

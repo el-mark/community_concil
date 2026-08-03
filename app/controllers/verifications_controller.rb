@@ -5,9 +5,9 @@ class VerificationsController < ApplicationController
     if user
       user.verify! unless user.verified?
       session[:user_id] = user.id
-      redirect_to new_issue_path, notice: "Your email has been verified. You can now report issues."
+      redirect_to new_issue_path, notice: "Tu correo electrónico ha sido verificado. Ya puedes reportar problemas."
     else
-      redirect_to signup_path, alert: "Invalid verification link."
+      redirect_to signup_path, alert: "El enlace de verificación no es válido."
     end
   end
 end

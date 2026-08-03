@@ -1,4 +1,4 @@
-<h1>Report an issue</h1>
+<h1>Reportar un problema</h1>
 
 <%= form_with model: @issue, class: "card form" do |f| %>
   <% if @issue.errors.any? %>
@@ -13,23 +13,23 @@
 
   <div class="field">
     <%= f.label :frequency %>
-    <%= f.select :frequency, Issue.frequencies.keys.map { |k| [k.capitalize, k] }, prompt: "How often does this happen?" %>
+    <%= f.select :frequency, Issue.frequency_options, prompt: "¿Con qué frecuencia ocurre?" %>
   </div>
 
   <div class="field">
     <%= f.label :address %>
-    <%= f.text_field :address, required: true, placeholder: "123 Main St" %>
+    <%= f.text_field :address, required: true, placeholder: "Av. Arequipa 1234, Lima" %>
   </div>
 
   <div class="field">
-    <%= f.label :title, "Title of the issue" %>
-    <%= f.text_field :title, required: true, maxlength: 150, placeholder: "Broken streetlight" %>
+    <%= f.label :title, "Título del problema" %>
+    <%= f.text_field :title, required: true, maxlength: 150, placeholder: "Poste de luz malogrado" %>
   </div>
 
   <div class="field">
-    <%= f.label :description, "Description of the issue" %>
-    <%= f.text_area :description, required: true, rows: 6, placeholder: "Describe the issue in detail…" %>
+    <%= f.label :description, "Descripción del problema" %>
+    <%= f.text_area :description, required: true, rows: 6, placeholder: "Describe el problema en detalle…" %>
   </div>
 
-  <%= f.submit "Report issue" %>
+  <%= f.submit "Reportar problema" %>
 <% end %>
