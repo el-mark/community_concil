@@ -2,7 +2,7 @@ es:
   activerecord:
     models:
       user: "Usuario"
-      issue: "Problema"
+      issue: "Incidencia"
     attributes:
       user:
         email: "Correo electrónico"

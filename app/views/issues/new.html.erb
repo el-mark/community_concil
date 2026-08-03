@@ -1,4 +1,4 @@
-<h1>Reportar un problema</h1>
+<h1>Reportar una incidencia</h1>
 
 <%= form_with model: @issue, class: "card form" do |f| %>
   <% if @issue.errors.any? %>
@@ -22,14 +22,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :title, "Título del problema" %>
+    <%= f.label :title, "Título de la incidencia" %>
     <%= f.text_field :title, required: true, maxlength: 150, placeholder: "Poste de luz malogrado" %>
   </div>
 
   <div class="field">
-    <%= f.label :description, "Descripción del problema" %>
-    <%= f.text_area :description, required: true, rows: 6, placeholder: "Describe el problema en detalle…" %>
+    <%= f.label :description, "Descripción de la incidencia" %>
+    <%= f.text_area :description, required: true, rows: 6, placeholder: "Describe la incidencia en detalle…" %>
   </div>
 
-  <%= f.submit "Reportar problema" %>
+  <%= f.submit "Reportar incidencia" %>
 <% end %>

@@ -20,8 +20,8 @@
       <div class="container header-inner">
         <%= link_to "Junta Vecinal", root_path, class: "brand" %>
         <nav>
-          <%= link_to "Reportar un problema", new_issue_path %>
-          <%= link_to "Todos los problemas", issues_path %>
+          <%= link_to "Reportar una incidencia", new_issue_path %>
+          <%= link_to "Todas las incidencias", issues_path %>
           <% if current_user %>
             <span class="user-email"><%= current_user.email %></span>
             <%= button_to "Cerrar sesión", logout_path, method: :delete, class: "link-button" %>

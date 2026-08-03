@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   def require_verified_user
     return if current_user&.verified?
 
-    redirect_to signup_path, alert: "Debes registrarte y verificar tu correo electrónico antes de reportar un problema."
+    redirect_to signup_path, alert: "Debes registrarte y verificar tu correo electrónico antes de reportar una incidencia."
   end
 end

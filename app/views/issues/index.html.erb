@@ -1,9 +1,9 @@
-<h1>Problemas reportados</h1>
+<h1>Incidencias reportadas</h1>
 
 <% if @issues.empty? %>
   <div class="card">
-    <p>Todavía no se ha reportado ningún problema.</p>
-    <p><%= link_to "Reporta el primero", new_issue_path %>.</p>
+    <p>Todavía no se ha reportado ninguna incidencia.</p>
+    <p><%= link_to "Reporta la primera", new_issue_path %>.</p>
   </div>
 <% else %>
   <% @issues.each do |issue| %>
