@@ -1,0 +1,13 @@
+<h1>Inicia sesión</h1>
+<p>Ingresa tu correo electrónico para iniciar sesión. Debes haber verificado tu correo previamente.</p>
+
+<%= form_with model: @user, url: login_path, class: "card form" do |f| %>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true, autofocus: true, placeholder: "tucorreo@ejemplo.com" %>
+  </div>
+
+  <%= f.submit "Iniciar sesión" %>
+<% end %>
+
+<p class="muted">¿No tienes cuenta? <%= link_to "Regístrate aquí", signup_path %>.</p>
